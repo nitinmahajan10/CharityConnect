@@ -1,0 +1,13 @@
+<h1>Charity Detail</h1>
+<button (click)="location.back()">Back</button>
+<button (click)="deleteCharity()">Delete</button>
+<div *ngIf="theCharity">
+    {{theCharity.id}}
+<input [(ngModel)]='theCharity.name' placeholder="Name"/>
+<input [(ngModel)]='theCharity.url' placeholder="Website Url"/>
+<input type="textarea" [(ngModel)]='theCharity.missionStatement' placeholder="Description or Mission Statement"/>
+
+ <input type="textarea" [(ngModel)]='theCharity.description' placeholder="Description or Mission Statement"/>
+
+<button (click)="upsertCharity()">Upsert</button>
+</div>

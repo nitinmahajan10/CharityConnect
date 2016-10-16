@@ -1,0 +1,11 @@
+<h4>Charity List</h4>
+<input [(ngModel)]="searchName" (ngModelChange)="onSearch()" placeholder="search by name">
+<button (click)="onEdit(0)">New Charity</button>
+<ul>
+    <li *ngFor="let theCharity of charityList" (click)="onSelect(theCharity)">
+        <div>
+            {{theCharity.id}} <label>{{theCharity.name}}</label>
+            <button (click)="onEdit(theCharity.id)">Edit</button>
+        </div>
+    </li>
+</ul>
