@@ -12,6 +12,7 @@ import {CharityDataSvc} from './shared/services/charityData.svc';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { CharityDataSvcInMemory } from './shared/services/charityData.svc.in-memory';
+import { RichEditorComponent } from './directives/richEditor.component';
 
 @NgModule({
     imports: [
@@ -39,7 +40,7 @@ import { CharityDataSvcInMemory } from './shared/services/charityData.svc.in-mem
         }
         ])
     ],
-    declarations: [AppComponent, CharityDetailComponent, CharityListComponent, CharityEditor],
+    declarations: [AppComponent, CharityDetailComponent, CharityListComponent, CharityEditor, RichEditorComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule{

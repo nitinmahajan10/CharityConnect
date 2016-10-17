@@ -3,7 +3,7 @@ export class CharityDataSvcInMemory implements InMemoryDbService
 { 
     createDb() {
     let charityList = [
-            { id: 11, name: 'Mr. Nice ko' },
+            { id: 11, name: 'Mr. Nice ko', missionStatement:'<p>This is nice charity <strong>highly recommended</strong></p>' },
             { id: 12, name: 'Narco' },
             { id: 13, name: 'Bombasto' },
             { id: 14, name: 'Celeritas' },

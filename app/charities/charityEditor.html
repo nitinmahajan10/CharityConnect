@@ -3,11 +3,18 @@
 <button (click)="deleteCharity()">Delete</button>
 <div *ngIf="theCharity">
     {{theCharity.id}}
-<input [(ngModel)]='theCharity.name' placeholder="Name"/>
-<input [(ngModel)]='theCharity.url' placeholder="Website Url"/>
-<input type="textarea" [(ngModel)]='theCharity.missionStatement' placeholder="Description or Mission Statement"/>
+    <input [(ngModel)]='theCharity.name' placeholder="Name"/>
+    <input [(ngModel)]='theCharity.url' placeholder="Website Url"/>
 
- <input type="textarea" [(ngModel)]='theCharity.description' placeholder="Description or Mission Statement"/>
-
-<button (click)="upsertCharity()">Upsert</button>
+    <rich-editor [elementId]="'missionStatement'" [rawText]='theCharity.missionStatement' 
+        (onEditorKeyup)="missionStatementSet($event)">
+    </rich-editor>
+    
+    <br/>
+    
+    <textarea name="description" [(ngModel)]='theCharity.description'
+        placeholder="Detailed information about charity">
+    </textarea>
+    
+    <button (click)="upsertCharity()">Upsert</button>
 </div>
